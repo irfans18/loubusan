@@ -1,2 +1,2 @@
-# mona
+# lobusan
  brainstorming app with flutter
