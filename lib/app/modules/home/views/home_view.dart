@@ -26,20 +26,22 @@ class HomeView extends GetView<HomeController> {
     attributeText(int data) {
       return Row(
         crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           data == 3
               ? SizedBox(
                   width: 0,
                 )
-              : Icon(data == 1 ? Icons.chat_outlined : Icons.thumb_up,
+              : Icon(data == 1 ? Icons.chat_rounded : Icons.thumb_up_alt,
                   size: 16),
           SizedBox(
             width: 3,
           ),
           Text(
-            data == 1 ? "Response : " : (data == 2 ? "Likes : " : "Anonymous"),
+            data == 1 ? "Comments : 10" : (data == 2 ? "Likes : 100" : "Guest : on"),
             style: attributeTextStyle,
           ),
+          
           // data != 3
           //     ? SizedBox(
           //         width: 0,
@@ -82,6 +84,7 @@ class HomeView extends GetView<HomeController> {
                   attributeText(3),
                 ],
               ),
+              SizedBox(width: 32,),
             ],
           ),
         ),
@@ -95,7 +98,7 @@ class HomeView extends GetView<HomeController> {
         title: Text('Mona'),
         actions: [
           Padding(
-            padding: const EdgeInsets.all(defaultMargin),
+            padding: const EdgeInsets.symmetric(horizontal: defaultMargin),
             child: Icon(Icons.person_rounded),
           )
         ],
@@ -135,6 +138,7 @@ class HomeView extends GetView<HomeController> {
               height: 60,
             ),
             customCard(),
+            SizedBox(height: 14,),
             newTopic(),
           ],
         ),

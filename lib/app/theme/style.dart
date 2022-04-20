@@ -9,7 +9,7 @@ Color accentColor = const Color(0xffFF6464);
 Color toggleColor = const Color(0xff60D141);
 
 Color primaryTextColor = const Color(0xff000000);
-Color nameTextColor = const Color(0xff5CC33F);
+Color nameTextColor = const Color(0xff60D141);
 Color headerTextColor = const Color(0xffFFFFFF);
 
 FontWeight light = FontWeight.w300;
