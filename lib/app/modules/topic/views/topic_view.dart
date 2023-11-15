@@ -8,7 +8,7 @@ import '../controllers/topic_controller.dart';
 class TopicView extends GetView<TopicController> {
   @override
   Widget build(BuildContext context) {
-    ideaCard([int like= 1]) {
+    ideaCard([int like = 1]) {
       return Card(
         elevation: 3,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -43,9 +43,11 @@ class TopicView extends GetView<TopicController> {
               padding: const EdgeInsets.only(top: 10),
               child: Column(
                 children: [
-                  Icon(like==1 ? Icons.thumb_up_alt : Icons.thumb_up_alt_outlined),
+                  Icon(like == 1
+                      ? Icons.thumb_up_alt
+                      : Icons.thumb_up_alt_outlined),
                   Text(
-                    like==1 ? "100" : "0",
+                    like == 1 ? "100" : "0",
                     style: attributeTextStyle,
                   )
                 ],
@@ -155,12 +157,16 @@ class TopicView extends GetView<TopicController> {
             ),
             GestureDetector(
               child: Card(
-                color: accentColor,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Icon(Icons.send, color: Colors.white,),
-                )),
+                  color: accentColor,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(100)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.send,
+                      color: Colors.white,
+                    ),
+                  )),
               onTap: () {},
             )
           ],
